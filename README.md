@@ -1,5 +1,7 @@
 # Vue Component Library Starter
 
+### Everything you need to get started building a Vue Component Library
+
 ## Project setup
 ```
 npm run build-bundle
