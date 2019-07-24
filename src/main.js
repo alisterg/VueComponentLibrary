@@ -1,8 +1,13 @@
 import Vue from 'vue'
-import App from './App.vue'
 
-Vue.config.productionTip = false
+import TestComponent from "./components/TestComponent.vue";
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+const Components = {
+  TestComponent
+};
+
+Object.keys(Components).forEach(name => {
+  Vue.component(name, Components[name]);
+});
+
+export default Components;

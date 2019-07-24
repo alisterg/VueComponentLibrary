@@ -2,8 +2,10 @@
   "name": "vue-comp-test",
   "version": "0.1.0",
   "private": true,
+  "main": "./dist/test.js",
   "scripts": {
     "serve": "vue-cli-service serve",
+    "build-bundle": "vue-cli-service build --target lib --name test ./src/main.js",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },

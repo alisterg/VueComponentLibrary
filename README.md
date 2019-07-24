@@ -1,29 +1,32 @@
-# vue-comp-test
+# Vue Component Library Starter
 
 ## Project setup
 ```
-npm install
+npm run build-bundle
 ```
+This generates the files in dist/. 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+`test.umd.js` is our UMD file, which we can use in most situations, including in a HTML script tag. Our library is also exported to a property of the **window** object in a HTML file.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+`test.umd.min.js` is the minified version, which we will use in production.
 
-### Run your tests
-```
-npm run test
-```
+`test.common.js` is our CommonJS implementation, which we can use from NodeJS with a **require** statement.
 
-### Lints and fixes files
+## Using in a HTML file
+Include Vue.js from the CDN
 ```
-npm run lint
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 ```
+Since we already registered our components globally, we can use them in any Vue component we create.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+<div id="app">
+  <test-component>
+</div>
+
+<script>
+var app = new Vue({
+  el: '#app'
+})
+</script>
+```
